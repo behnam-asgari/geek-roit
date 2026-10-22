@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
     { href: isHome ? '#services' : '/#services', label: 'خدمات' },
     { href: isHome ? '#process' : '/#process', label: 'فرآیند توسعه' },
     { href: isHome ? '#portfolio' : '/#portfolio', label: 'نمونه‌کارها' },
-    { href: '/admin/content', label: 'پنل مدیریت', isRoute: true },
+    { href: isHome ? '#why-geekroit' : '/#why-geekroit', label: 'چرا گیک رویت' },
   ];
 
   return (
@@ -39,25 +39,15 @@ export const Navbar: React.FC = () => {
           aria-label="ناوبری اصلی"
           className="hidden md:flex items-center gap-7 text-sm font-medium text-[#A5AEC5]"
         >
-          {navLinks.map((item) =>
-            item.isRoute ? (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="hover:text-[#F5F7FF] hover:underline underline-offset-8 decoration-[var(--accent-primary)] transition-colors whitespace-nowrap shrink-0"
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <a
-                key={item.href}
-                href={item.href}
-                className="hover:text-[#F5F7FF] hover:underline underline-offset-8 decoration-[var(--accent-primary)] transition-colors whitespace-nowrap shrink-0"
-              >
-                {item.label}
-              </a>
-            )
-          )}
+          {navLinks.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="hover:text-[#F5F7FF] hover:underline underline-offset-8 decoration-[var(--accent-primary)] transition-colors whitespace-nowrap shrink-0"
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
 
         {/* Zone 3: Primary action + mobile toggle */}
@@ -96,27 +86,16 @@ export const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-[var(--border-color)] bg-[#0E1220] px-6 py-5 space-y-4">
           <nav aria-label="ناوبری موبایل" className="flex flex-col space-y-3">
-            {navLinks.map((item) =>
-              item.isRoute ? (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="py-2 text-base font-medium text-[#F5F7FF] hover:text-[var(--accent-secondary)] transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="py-2 text-base font-medium text-[#F5F7FF] hover:text-[var(--accent-secondary)] transition-colors"
-                >
-                  {item.label}
-                </a>
-              )
-            )}
+            {navLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="py-2 text-base font-medium text-[#F5F7FF] hover:text-[var(--accent-secondary)] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
           {hasVisibleHeaderPhone && (

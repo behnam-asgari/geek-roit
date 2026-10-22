@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Layers, ExternalLink, Sliders } from 'lucide-react';
+import { Layers, ExternalLink } from 'lucide-react';
 import { useSiteConfig } from '../../store/ConfigContext';
 import { getPublicPortfolioProjects } from '../../utils/validation';
 
@@ -56,15 +55,6 @@ export const ScenePortfolio: React.FC = () => {
               {portfolio.description}
             </p>
           </div>
-
-          {/* Admin Quick Toggle Link */}
-          <Link
-            to="/admin/projects"
-            className="inline-flex items-center gap-2 text-xs font-medium text-[#A5AEC5] hover:text-[#F5F7FF] transition-colors whitespace-nowrap shrink-0"
-          >
-            <Sliders className="w-3.5 h-3.5 text-[var(--accent-primary)]" />
-            <span>مدیریت وضعیت نمایش نمونه‌کارها در پنل ادمین</span>
-          </Link>
         </div>
 
         {showComingSoon ? (

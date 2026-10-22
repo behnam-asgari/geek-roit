@@ -33,12 +33,6 @@ export const NotFoundPage: React.FC = () => {
             <ArrowRight className="w-4 h-4" />
             <span>بازگشت به صفحه اصلی</span>
           </Link>
-          <Link
-            to="/admin/content"
-            className={getButtonClasses('secondary')}
-          >
-            پنل مدیریت
-          </Link>
         </div>
       </div>
     </div>

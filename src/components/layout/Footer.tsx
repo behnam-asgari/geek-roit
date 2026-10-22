@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, ExternalLink, Settings } from 'lucide-react';
+import { Phone, Mail, ExternalLink } from 'lucide-react';
 import { useSiteConfig } from '../../store/ConfigContext';
 
 export const Footer: React.FC = () => {
@@ -66,13 +66,9 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <Link
-                  to="/admin/content"
-                  className="inline-flex items-center gap-1.5 text-[var(--accent-lavender)] hover:text-[#F5F7FF] transition-colors"
-                >
-                  <Settings className="w-3.5 h-3.5" />
-                  <span>مدیریت سایت و تنظیمات</span>
-                </Link>
+                <a href="#contact-finale" className="hover:text-[#F5F7FF] transition-colors">
+                  شروع پروژه و تماس
+                </a>
               </li>
             </ul>
           </div>
