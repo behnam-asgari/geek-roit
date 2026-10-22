@@ -1,0 +1,6 @@
+{
+  "name": "Geek roit — استودیو مهندسی و طراحی محصولات دیجیتال",
+  "description": "وب‌سایت تعاملی و اسکرول‌محور آژانس دیجیتال گیک رویت؛ تخصصی در توسعه وردپرس، وب‌اپلیکیشن‌های React، اپلیکیشن‌های موبایل و راهکارهای هوش مصنوعی.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
